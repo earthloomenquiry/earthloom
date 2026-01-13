@@ -1,0 +1,422 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Bluetooth Headphones",
+        "category": "Electronics",
+        "price": 2999,
+        "discount": 25,
+        "rating": 4.5,
+        "reviews": 1250,
+        "images": [
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+            "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500"
+        ],
+        "description": "Premium wireless headphones with active noise cancellation, 30-hour battery life, and superior sound quality. Perfect for music lovers and professionals.",
+        "features": [
+            "Active Noise Cancellation",
+            "30hr Battery",
+            "Bluetooth 5.0",
+            "Foldable Design"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "name": "Smart Fitness Watch",
+        "category": "Wearables",
+        "price": 4499,
+        "discount": 15,
+        "rating": 4.3,
+        "reviews": 890,
+        "images": [
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+            "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500"
+        ],
+        "description": "Track your fitness goals with this advanced smartwatch featuring heart rate monitoring, GPS, and 50+ sport modes.",
+        "features": [
+            "Heart Rate Monitor",
+            "GPS Tracking",
+            "Water Resistant",
+            "7-Day Battery"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 3,
+        "name": "Premium Leather Backpack",
+        "category": "Fashion",
+        "price": 3599,
+        "discount": 30,
+        "rating": 4.7,
+        "reviews": 2100,
+        "images": [
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+            "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500"
+        ],
+        "description": "Handcrafted genuine leather backpack with laptop compartment, perfect for professionals and travelers.",
+        "features": [
+            "Genuine Leather",
+            "Laptop Compartment",
+            "Water Resistant",
+            "Multiple Pockets"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 4,
+        "name": "4K Action Camera",
+        "category": "Electronics",
+        "price": 8999,
+        "discount": 20,
+        "rating": 4.6,
+        "reviews": 1560,
+        "images": [
+            "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500",
+            "https://images.unsplash.com/photo-1606986628106-4b1a6e3f5e5e?w=500"
+        ],
+        "description": "Capture your adventures in stunning 4K resolution with image stabilization and waterproof design.",
+        "features": [
+            "4K Video",
+            "Waterproof",
+            "Image Stabilization",
+            "WiFi Connectivity"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 5,
+        "name": "Ergonomic Office Chair",
+        "category": "Furniture",
+        "price": 12999,
+        "discount": 10,
+        "rating": 4.4,
+        "reviews": 780,
+        "images": [
+            "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=500",
+            "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500"
+        ],
+        "description": "Premium ergonomic chair with lumbar support, adjustable armrests, and breathable mesh back for all-day comfort.",
+        "features": [
+            "Lumbar Support",
+            "Adjustable Height",
+            "Breathable Mesh",
+            "360° Swivel"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 6,
+        "name": "Portable Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 1999,
+        "discount": 35,
+        "rating": 4.2,
+        "reviews": 3200,
+        "images": [
+            "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500",
+            "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500"
+        ],
+        "description": "Compact wireless speaker with 360° sound, waterproof design, and 12-hour battery life.",
+        "features": [
+            "360° Sound",
+            "Waterproof IPX7",
+            "12hr Battery",
+            "Compact Design"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 7,
+        "name": "Professional DSLR Camera",
+        "category": "Electronics",
+        "price": 45999,
+        "discount": 12,
+        "rating": 4.8,
+        "reviews": 650,
+        "images": [
+            "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500",
+            "https://images.unsplash.com/photo-1606986628106-4b1a6e3f5e5e?w=500"
+        ],
+        "description": "Professional-grade DSLR with 24MP sensor, 4K video recording, and advanced autofocus system.",
+        "features": [
+            "24MP Sensor",
+            "4K Video",
+            "WiFi & Bluetooth",
+            "Dual Card Slots"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 8,
+        "name": "Minimalist Desk Lamp",
+        "category": "Home",
+        "price": 1499,
+        "discount": 20,
+        "rating": 4.1,
+        "reviews": 920,
+        "images": [
+            "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500",
+            "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=500"
+        ],
+        "description": "Modern LED desk lamp with adjustable brightness, touch control, and USB charging port.",
+        "features": [
+            "LED Light",
+            "Touch Control",
+            "USB Port",
+            "Adjustable Brightness"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 9,
+        "name": "Stainless Steel Water Bottle",
+        "category": "Sports",
+        "price": 799,
+        "discount": 25,
+        "rating": 4.5,
+        "reviews": 4500,
+        "images": [
+            "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+            "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=500"
+        ],
+        "description": "Insulated stainless steel bottle keeps drinks cold for 24 hours or hot for 12 hours.",
+        "features": [
+            "24hr Cold",
+            "12hr Hot",
+            "BPA Free",
+            "Leak Proof"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 10,
+        "name": "Mechanical Gaming Keyboard",
+        "category": "Electronics",
+        "price": 5999,
+        "discount": 18,
+        "rating": 4.7,
+        "reviews": 2800,
+        "images": [
+            "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
+            "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500"
+        ],
+        "description": "RGB mechanical keyboard with customizable keys, anti-ghosting, and premium build quality.",
+        "features": [
+            "RGB Backlight",
+            "Mechanical Switches",
+            "Anti-Ghosting",
+            "Programmable Keys"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 11,
+        "name": "Yoga Mat Premium",
+        "category": "Sports",
+        "price": 1299,
+        "discount": 30,
+        "rating": 4.4,
+        "reviews": 1800,
+        "images": [
+            "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500",
+            "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=500"
+        ],
+        "description": "Extra thick yoga mat with non-slip surface and carrying strap for comfortable practice.",
+        "features": [
+            "Non-Slip Surface",
+            "Extra Thick",
+            "Eco-Friendly",
+            "Carrying Strap"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 12,
+        "name": "Wireless Gaming Mouse",
+        "category": "Electronics",
+        "price": 2499,
+        "discount": 22,
+        "rating": 4.6,
+        "reviews": 3100,
+        "images": [
+            "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500",
+            "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500"
+        ],
+        "description": "High-precision wireless gaming mouse with customizable DPI, RGB lighting, and ergonomic design.",
+        "features": [
+            "16000 DPI",
+            "RGB Lighting",
+            "Wireless",
+            "Programmable Buttons"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 13,
+        "name": "Smart LED Bulb (4-Pack)",
+        "category": "Home",
+        "price": 1899,
+        "discount": 28,
+        "rating": 4.3,
+        "reviews": 2200,
+        "images": [
+            "https://images.unsplash.com/photo-1550985616-10810253b84d?w=500",
+            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+        ],
+        "description": "WiFi-enabled smart bulbs with 16 million colors, voice control, and scheduling features.",
+        "features": [
+            "16M Colors",
+            "Voice Control",
+            "Scheduling",
+            "Energy Efficient"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 14,
+        "name": "Running Shoes Pro",
+        "category": "Fashion",
+        "price": 3999,
+        "discount": 15,
+        "rating": 4.5,
+        "reviews": 1950,
+        "images": [
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+            "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500"
+        ],
+        "description": "Lightweight running shoes with responsive cushioning and breathable mesh upper.",
+        "features": [
+            "Responsive Cushioning",
+            "Breathable Mesh",
+            "Lightweight",
+            "Durable Sole"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 15,
+        "name": "Portable Power Bank 20000mAh",
+        "category": "Electronics",
+        "price": 1599,
+        "discount": 32,
+        "rating": 4.4,
+        "reviews": 5600,
+        "images": [
+            "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500",
+            "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500"
+        ],
+        "description": "High-capacity power bank with fast charging, dual USB ports, and LED display.",
+        "features": [
+            "20000mAh",
+            "Fast Charging",
+            "Dual USB",
+            "LED Display"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 16,
+        "name": "Ceramic Coffee Mug Set",
+        "category": "Home",
+        "price": 899,
+        "discount": 20,
+        "rating": 4.2,
+        "reviews": 1100,
+        "images": [
+            "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=500",
+            "https://images.unsplash.com/photo-1517256673644-36ad11246d21?w=500"
+        ],
+        "description": "Set of 4 elegant ceramic mugs with comfortable handles, perfect for coffee or tea.",
+        "features": [
+            "Set of 4",
+            "Dishwasher Safe",
+            "Microwave Safe",
+            "Elegant Design"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 17,
+        "name": "Wireless Earbuds Pro",
+        "category": "Electronics",
+        "price": 3499,
+        "discount": 25,
+        "rating": 4.6,
+        "reviews": 4200,
+        "images": [
+            "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500",
+            "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=500"
+        ],
+        "description": "True wireless earbuds with active noise cancellation, touch controls, and 24-hour battery life.",
+        "features": [
+            "ANC",
+            "Touch Controls",
+            "24hr Battery",
+            "IPX4 Water Resistant"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 18,
+        "name": "Digital Drawing Tablet",
+        "category": "Electronics",
+        "price": 6999,
+        "discount": 18,
+        "rating": 4.7,
+        "reviews": 890,
+        "images": [
+            "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500",
+            "https://images.unsplash.com/photo-1616628188859-7a11abb6fcc9?w=500"
+        ],
+        "description": "Professional drawing tablet with 8192 pressure levels and battery-free stylus.",
+        "features": [
+            "8192 Pressure Levels",
+            "Battery-Free Pen",
+            "Customizable Buttons",
+            "Large Active Area"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 19,
+        "name": "Stainless Steel Cookware Set",
+        "category": "Home",
+        "price": 8999,
+        "discount": 22,
+        "rating": 4.5,
+        "reviews": 1200,
+        "images": [
+            "https://images.unsplash.com/photo-1584990347449-39b4aa02e3b8?w=500",
+            "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500"
+        ],
+        "description": "Premium 10-piece stainless steel cookware set with heat-resistant handles and glass lids.",
+        "features": [
+            "10-Piece Set",
+            "Dishwasher Safe",
+            "Oven Safe",
+            "Heat-Resistant Handles"
+        ],
+        "inStock": true
+    },
+    {
+        "id": 20,
+        "name": "Travel Duffel Bag",
+        "category": "Fashion",
+        "price": 2499,
+        "discount": 28,
+        "rating": 4.3,
+        "reviews": 1650,
+        "images": [
+            "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+            "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=500"
+        ],
+        "description": "Spacious travel duffel bag with shoe compartment, adjustable strap, and water-resistant fabric.",
+        "features": [
+            "Shoe Compartment",
+            "Water Resistant",
+            "Adjustable Strap",
+            "Multiple Pockets"
+        ],
+        "inStock": true
+    }
+]
