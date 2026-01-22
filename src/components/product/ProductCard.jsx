@@ -9,8 +9,11 @@ import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { formatCurrency } from '../../utils/helpers';
 
+import placeholderImg from '../../assets/images/placeholder.svg';
+
 const ProductCard = ({ product, onQuickView }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [imageError, setImageError] = useState(false);
     const { addToCart } = useCart();
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
     const inWishlist = isInWishlist(product.id);
@@ -44,15 +47,20 @@ const ProductCard = ({ product, onQuickView }) => {
             <Card className="group relative overflow-hidden h-full flex flex-col">
                 {/* Image Container */}
                 <div className="relative overflow-hidden bg-gray-100 aspect-square">
-                    {!imageLoaded && (
+                    {/* Skeleton while loading */}
+                    {!imageLoaded && !imageError && (
                         <div className="absolute inset-0 skeleton" />
                     )}
                     <img
-                        src={product.image}
+                        src={imageError ? placeholderImg : product.image}
                         alt={product.name}
-                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'
+                        className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-111 ${imageLoaded || imageError ? 'opacity-100' : 'opacity-0'
                             }`}
                         onLoad={() => setImageLoaded(true)}
+                        onError={() => {
+                            setImageError(true);
+                            setImageLoaded(true);
+                        }}
                         loading="lazy"
                     />
 

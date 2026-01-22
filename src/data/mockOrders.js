@@ -22,10 +22,10 @@ export const mockOrders = [
             }
         ],
         shippingAddress: {
-            name: "John Doe",
-            address: "123 Main Street, Apartment 4B",
-            city: "Mumbai",
-            state: "Maharashtra",
+            name: "Deepak Kumar",
+            address: "Gandak colony , Motihari , East Champaran Bihar",
+            city: "Motihari",
+            state: "Bihar",
             pincode: "400001"
         },
         paymentMethod: "Credit Card"

@@ -71,9 +71,9 @@ export const DELIVERY_TIME = '3-5 business days';
 export const FREE_SHIPPING_THRESHOLD = 500;
 
 export const CONTACT_INFO = {
-    email: 'helpcenter@earthloom.com',
-    phone: '+91 8102861783',
-    address: 'Waghodia , Vadodara ( Gujarat )',
+    email: 'earthloomenquiry@gmail.com',
+    phone: '+91 9974998892',
+    address: 'B 302, Sun Pharma Road State - Gujarat, City - Vadodara - 390012',
 };
 
 export const SOCIAL_LINKS = {
