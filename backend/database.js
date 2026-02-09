@@ -1,6 +1,12 @@
 import sqlite3 from 'sqlite3';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const db = new sqlite3.Database('./earthloom.db', (err) => {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const dbPath = path.resolve(__dirname, 'earthloom.db');
+
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error('Error opening database ' + err.message);
   } else {
@@ -40,7 +46,7 @@ db.serialize(() => {
     image_url TEXT,
     FOREIGN KEY(product_id) REFERENCES products(id)
   )`);
-  
+
   // Create Product Features Table (for features array)
   db.run(`CREATE TABLE IF NOT EXISTS product_features (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

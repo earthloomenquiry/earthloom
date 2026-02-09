@@ -34,4 +34,5 @@ dist-ssr
 .vercel
 
 # Database
-*.db
+# *.db (Uncomment to ignore DB, but we need it for Vercel deployment)
+!backend/earthloom.db
