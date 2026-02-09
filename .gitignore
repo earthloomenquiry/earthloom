@@ -32,3 +32,6 @@ dist-ssr
 .vercel
 
 .vercel
+
+# Database
+*.db

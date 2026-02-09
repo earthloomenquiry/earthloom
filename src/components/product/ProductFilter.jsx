@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { PRICE_RANGES, RATING_FILTERS } from '../../utils/constants';
-import { categories } from '../../data/products';
 
-const ProductFilter = ({ filters, onFilterChange }) => {
+const ProductFilter = ({ filters, onFilterChange, categories }) => {
     const [expandedSections, setExpandedSections] = useState({
         category: true,
         price: true,

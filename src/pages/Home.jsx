@@ -1,13 +1,41 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaShippingFast, FaUndo, FaLock, FaHeadset } from 'react-icons/fa';
 import ProductGrid from '../components/product/ProductGrid';
-import { products, categories } from '../data/products';
+import { fetchProducts, fetchCategories } from '../services/api';
 import { getRandomProducts } from '../utils/helpers';
 import { APP_NAME, APP_TAGLINE } from '../utils/constants';
 
 const Home = () => {
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const loadData = async () => {
+            try {
+                const [productsData, categoriesData] = await Promise.all([
+                    fetchProducts(),
+                    fetchCategories()
+                ]);
+                setProducts(productsData);
+                setCategories(categoriesData);
+            } catch (error) {
+                console.error("Failed to load home data", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadData();
+    }, []);
+
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    }
+
     const featuredProducts = getRandomProducts(products, 8);
+    // Ensure discount is treated as number if it comes as string, though DB has it as integer
     const dealsProducts = products.filter(p => p.discount >= 35).slice(0, 4);
 
     return (

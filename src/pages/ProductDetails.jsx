@@ -9,10 +9,10 @@ import Rating from '../components/common/Rating';
 import Badge from '../components/common/Badge';
 import Button from '../components/common/Button';
 import ProductGrid from '../components/product/ProductGrid';
-import { products } from '../data/products';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { formatCurrency, getRelatedProducts } from '../utils/helpers';
+import { fetchProductById, fetchProducts } from '../services/api';
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -20,24 +20,48 @@ const ProductDetails = () => {
     const [product, setProduct] = useState(null);
     const [quantity, setQuantity] = useState(1);
     const [relatedProducts, setRelatedProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const { addToCart } = useCart();
     const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
     useEffect(() => {
-        const foundProduct = products.find(p => p.id === parseInt(id));
-        if (foundProduct) {
-            setProduct(foundProduct);
-            setRelatedProducts(getRelatedProducts(products, foundProduct, 4));
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            navigate('/products');
+        const loadProductData = async () => {
+            setLoading(true);
+            try {
+                const productData = await fetchProductById(id);
+                if (productData) {
+                    setProduct(productData);
+
+                    // Fetch all products to find related ones
+                    // Optimization: In a real app, backend should provide related products endpoint
+                    const allProducts = await fetchProducts();
+                    setRelatedProducts(getRelatedProducts(allProducts, productData, 4));
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    toast.error("Product not found");
+                    navigate('/products');
+                }
+            } catch (error) {
+                console.error("Error loading product details:", error);
+                toast.error("Failed to load product details");
+                navigate('/products');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (id) {
+            loadProductData();
         }
     }, [id, navigate]);
 
-    if (!product) {
+    if (loading) {
         return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
     }
+
+    if (!product) return null;
 
     const inWishlist = isInWishlist(product.id);
 

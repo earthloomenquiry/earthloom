@@ -6,13 +6,16 @@ import Breadcrumb from '../components/layout/Breadcrumb';
 import ProductGrid from '../components/product/ProductGrid';
 import ProductFilter from '../components/product/ProductFilter';
 import ProductSort from '../components/product/ProductSort';
-import { products } from '../data/products';
+import { fetchProducts, fetchCategories } from '../services/api';
 import { filterByCategory, filterByPriceRange, filterByRating, sortProducts, searchProducts } from '../utils/helpers';
 
 const ProductListing = () => {
     const [searchParams] = useSearchParams();
-    const [filteredProducts, setFilteredProducts] = useState(products);
+    const [allProducts, setAllProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [showFilters, setShowFilters] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const [filters, setFilters] = useState({
         category: searchParams.get('category') || 'All',
@@ -22,8 +25,31 @@ const ProductListing = () => {
 
     const [sortBy, setSortBy] = useState('relevance');
 
+    // Fetch products and categories on mount
     useEffect(() => {
-        let result = [...products];
+        const loadData = async () => {
+            try {
+                const [productsData, categoriesData] = await Promise.all([
+                    fetchProducts(),
+                    fetchCategories()
+                ]);
+                setAllProducts(productsData);
+                setFilteredProducts(productsData);
+                setCategories(categoriesData);
+            } catch (error) {
+                console.error("Failed to fetch data", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        loadData();
+    }, []);
+
+    // Apply filters and sorting
+    useEffect(() => {
+        if (loading) return;
+
+        let result = [...allProducts];
 
         // Apply search
         const searchQuery = searchParams.get('search');
@@ -46,12 +72,24 @@ const ProductListing = () => {
         result = sortProducts(result, sortBy);
 
         setFilteredProducts(result);
-    }, [filters, sortBy, searchParams]);
+    }, [filters, sortBy, searchParams, allProducts, loading]);
+
+    // Update category filter when URL param changes
+    useEffect(() => {
+        const categoryParam = searchParams.get('category');
+        if (categoryParam) {
+            setFilters(prev => ({ ...prev, category: categoryParam }));
+        }
+    }, [searchParams]);
 
     const breadcrumbItems = [
         { label: 'Products', path: '/products' },
         ...(filters.category !== 'All' ? [{ label: filters.category }] : []),
     ];
+
+    if (loading) {
+        return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    }
 
     return (
         <div className="min-h-screen bg-gray-50 py-8">
@@ -80,7 +118,7 @@ const ProductListing = () => {
                 <div className="flex flex-col lg:flex-row gap-8">
                     {/* Filters Sidebar */}
                     <aside className={`lg:w-64 flex-shrink-0 ${showFilters ? 'block' : 'hidden lg:block'}`}>
-                        <ProductFilter filters={filters} onFilterChange={setFilters} />
+                        <ProductFilter filters={filters} onFilterChange={setFilters} categories={categories} />
                     </aside>
 
                     {/* Products Grid */}
